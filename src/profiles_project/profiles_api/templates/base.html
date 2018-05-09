@@ -1,0 +1,7 @@
+<form name="login_form" action="/login/" method="post" accept-charset="utf-8" style="display: inline">
+    {% csrf_token %}
+    Username: <input type="text" name="username" value="" /><br />
+    Password: <input type="password" name="password" value="" /><br />
+    <input type="submit" value="submit" value = "" id ="submit" />
+    <p><a href="{% url password_reset %}">Forgot password?</a></p>
+</form>

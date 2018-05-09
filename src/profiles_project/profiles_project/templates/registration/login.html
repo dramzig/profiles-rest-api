@@ -1,0 +1,7 @@
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Hacer Login</button>
+  <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login con Facebook</a>
+</form>
