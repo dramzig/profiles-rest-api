@@ -17,6 +17,8 @@ from django.conf.urls import url
 from django.conf.urls import include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from mysite.core import views as core_views
+from
 
 urlpatterns = [
     url(r'^$', core_views.home, name='home'),

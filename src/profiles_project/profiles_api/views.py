@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from rest_framework import viewsets
@@ -108,3 +109,7 @@ class UserProfileFeedViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         """ser the user profile to the logged in user"""
         serializer.save(user_profile=self.request.user)
+
+@login_required
+def home(request):
+    return render(request, 'core/home.html')
